@@ -12,7 +12,7 @@ class Results_Scence: UIViewController{
     public var totalQuestion = 0;
     override func viewDidLoad() {
         super.viewDidLoad()
-        var percentage = Double(totalCorrect) / Double(3) * 100.0
+        var percentage = Double(totalCorrect) / Double(totalQuestion) * 100.0
         Display_Results.text = "You got " + String(totalCorrect) +
         "/" + String(totalQuestion) +  " correct " + String(Int(percentage)) + "%"
     }

@@ -19,6 +19,7 @@ class Main: UIViewController{
         let url = "http://tednewardsandbox.site44.com/questions.json"
         fetchJson(url)
         DispatchQueue.main.async {
+            self.TableView.reloadInputViews()
             self.TableView.reloadData()
         }
         TableView.delegate = self
@@ -58,7 +59,6 @@ class Main: UIViewController{
                   innerArray.append(result![i].questions[j].answer)
                   innerArray.append(contentsOf: result![i].questions[j].answers)
                   self.QuestionsAndAnswer.append(innerArray)
-
               }
           }
             
@@ -69,12 +69,7 @@ class Main: UIViewController{
 
     
     @IBAction func Settings(_ sender: Any) {
-        let alert = UIAlertController(title: "Settings", message: "Settings go here", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment:
-            "Default action"), style: .default, handler: { _ in NSLog("The \"OK\" alert occured.")
-        }))
-        self.present(alert, animated: true, completion: {
-            NSLog("The alert was presented")})
+        UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!, options: [:])
     }
     @IBAction func Setting_Button(_ sender: Any) {
     }
