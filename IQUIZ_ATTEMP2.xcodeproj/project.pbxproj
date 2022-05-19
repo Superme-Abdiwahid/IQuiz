@@ -16,6 +16,11 @@
 		DB325D95283418C200FCB14F /* IQUIZ_ATTEMP2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325D94283418C200FCB14F /* IQUIZ_ATTEMP2Tests.swift */; };
 		DB325D9F283418C200FCB14F /* IQUIZ_ATTEMP2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325D9E283418C200FCB14F /* IQUIZ_ATTEMP2UITests.swift */; };
 		DB325DA1283418C200FCB14F /* IQUIZ_ATTEMP2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DA0283418C200FCB14F /* IQUIZ_ATTEMP2UITestsLaunchTests.swift */; };
+		DB325DAE28341A1300FCB14F /* Begin_Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DAD28341A1300FCB14F /* Begin_Storyboard.swift */; };
+		DB325DB22834722E00FCB14F /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DB12834722E00FCB14F /* AppModel.swift */; };
+		DB325DB42834760400FCB14F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DB32834760400FCB14F /* Main.swift */; };
+		DB325DB82834791F00FCB14F /* Answer_Scence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DB72834791F00FCB14F /* Answer_Scence.swift */; };
+		DB325DBA28347C7400FCB14F /* Results_Scence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DB928347C7400FCB14F /* Results_Scence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		DB325D9A283418C200FCB14F /* IQUIZ_ATTEMP2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IQUIZ_ATTEMP2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB325D9E283418C200FCB14F /* IQUIZ_ATTEMP2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQUIZ_ATTEMP2UITests.swift; sourceTree = "<group>"; };
 		DB325DA0283418C200FCB14F /* IQUIZ_ATTEMP2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQUIZ_ATTEMP2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB325DAD28341A1300FCB14F /* Begin_Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Begin_Storyboard.swift; sourceTree = "<group>"; };
+		DB325DB12834722E00FCB14F /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		DB325DB32834760400FCB14F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		DB325DB72834791F00FCB14F /* Answer_Scence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer_Scence.swift; sourceTree = "<group>"; };
+		DB325DB928347C7400FCB14F /* Results_Scence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results_Scence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +112,12 @@
 				DB325D7D283418C000FCB14F /* AppDelegate.swift */,
 				DB325D7F283418C000FCB14F /* SceneDelegate.swift */,
 				DB325D81283418C000FCB14F /* ViewController.swift */,
+				DB325DB32834760400FCB14F /* Main.swift */,
+				DB325DB12834722E00FCB14F /* AppModel.swift */,
+				DB325DAD28341A1300FCB14F /* Begin_Storyboard.swift */,
 				DB325D83283418C000FCB14F /* Main.storyboard */,
+				DB325DB928347C7400FCB14F /* Results_Scence.swift */,
+				DB325DB72834791F00FCB14F /* Answer_Scence.swift */,
 				DB325D86283418C200FCB14F /* Assets.xcassets */,
 				DB325D88283418C200FCB14F /* LaunchScreen.storyboard */,
 				DB325D8B283418C200FCB14F /* Info.plist */,
@@ -258,8 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB325DB42834760400FCB14F /* Main.swift in Sources */,
+				DB325DBA28347C7400FCB14F /* Results_Scence.swift in Sources */,
 				DB325D82283418C000FCB14F /* ViewController.swift in Sources */,
+				DB325DB82834791F00FCB14F /* Answer_Scence.swift in Sources */,
 				DB325D7E283418C000FCB14F /* AppDelegate.swift in Sources */,
+				DB325DAE28341A1300FCB14F /* Begin_Storyboard.swift in Sources */,
+				DB325DB22834722E00FCB14F /* AppModel.swift in Sources */,
 				DB325D80283418C000FCB14F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
