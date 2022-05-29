@@ -13,9 +13,14 @@ class Main: UIViewController{
     var QuestionsAndAnswer = [[String]]()
     var count = 1
     var found = false;
+    var url = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        defaults.set("http://tednewardsandbox.site44.com/questions.json", forKey: "JSON_URL")
+            // url = 
+    //    print(defaults.url(forKey: "JSON_URL")!)
         let url = "http://tednewardsandbox.site44.com/questions.json"
         fetchJson(url)
         DispatchQueue.main.async {
@@ -70,6 +75,7 @@ class Main: UIViewController{
     
     @IBAction func Settings(_ sender: Any) {
         UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!, options: [:])
+        UserDefaults.standard.register(defaults: ["key" : "value"])
     }
     @IBAction func Setting_Button(_ sender: Any) {
     }
