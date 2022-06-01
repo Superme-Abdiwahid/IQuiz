@@ -10,12 +10,15 @@ import UIKit
 class Settings: UIViewController{
     public var URL = ""
     override func viewDidLoad() {
+        HomePage.isEnabled = false;
         super.viewDidLoad()
     }
    
+    @IBOutlet weak var HomePage: UIButton!
     
     @IBAction func JSON(_ sender: Any) {
         self.URL = Enter.text!
+        HomePage.isEnabled = true;
     }
     @IBOutlet weak var Enter: UITextField!
     

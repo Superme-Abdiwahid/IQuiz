@@ -340,6 +340,7 @@
                     <navigationItem key="navigationItem" id="OI7-Rj-5aC"/>
                     <connections>
                         <outlet property="Enter" destination="wg8-Ql-eAv" id="RrO-4g-hJ9"/>
+                        <outlet property="HomePage" destination="bJh-UE-jtX" id="dnh-Q6-5qC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0C-eM-bdb" sceneMemberID="firstResponder"/>
