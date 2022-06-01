@@ -21,7 +21,7 @@
 		DB325DB42834760400FCB14F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DB32834760400FCB14F /* Main.swift */; };
 		DB325DB82834791F00FCB14F /* Answer_Scence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DB72834791F00FCB14F /* Answer_Scence.swift */; };
 		DB325DBA28347C7400FCB14F /* Results_Scence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB325DB928347C7400FCB14F /* Results_Scence.swift */; };
-		DB325DD02836E88B00FCB14F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB325DCF2836E88B00FCB14F /* Settings.bundle */; };
+		DB3AE3EC2847BF1F000884B6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AE3EB2847BF1F000884B6 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		DB325DB32834760400FCB14F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DB325DB72834791F00FCB14F /* Answer_Scence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer_Scence.swift; sourceTree = "<group>"; };
 		DB325DB928347C7400FCB14F /* Results_Scence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results_Scence.swift; sourceTree = "<group>"; };
-		DB325DCF2836E88B00FCB14F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "../../FSApp-2/FSApp/Settings.bundle"; sourceTree = "<group>"; };
+		DB3AE3EB2847BF1F000884B6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,7 @@
 				DB325DB12834722E00FCB14F /* AppModel.swift */,
 				DB325DAD28341A1300FCB14F /* Begin_Storyboard.swift */,
 				DB325D83283418C000FCB14F /* Main.storyboard */,
+				DB3AE3EB2847BF1F000884B6 /* Settings.swift */,
 				DB325DB928347C7400FCB14F /* Results_Scence.swift */,
 				DB325DB72834791F00FCB14F /* Answer_Scence.swift */,
 				DB325D86283418C200FCB14F /* Assets.xcassets */,
@@ -140,7 +141,6 @@
 			children = (
 				DB325D9E283418C200FCB14F /* IQUIZ_ATTEMP2UITests.swift */,
 				DB325DA0283418C200FCB14F /* IQUIZ_ATTEMP2UITestsLaunchTests.swift */,
-				DB325DCF2836E88B00FCB14F /* Settings.bundle */,
 			);
 			path = IQUIZ_ATTEMP2UITests;
 			sourceTree = "<group>";
@@ -249,7 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB325DD02836E88B00FCB14F /* Settings.bundle in Resources */,
 				DB325D8A283418C200FCB14F /* LaunchScreen.storyboard in Resources */,
 				DB325D87283418C200FCB14F /* Assets.xcassets in Resources */,
 				DB325D85283418C000FCB14F /* Main.storyboard in Resources */,
@@ -283,6 +282,7 @@
 				DB325DB82834791F00FCB14F /* Answer_Scence.swift in Sources */,
 				DB325D7E283418C000FCB14F /* AppDelegate.swift in Sources */,
 				DB325DAE28341A1300FCB14F /* Begin_Storyboard.swift in Sources */,
+				DB3AE3EC2847BF1F000884B6 /* Settings.swift in Sources */,
 				DB325DB22834722E00FCB14F /* AppModel.swift in Sources */,
 				DB325D80283418C000FCB14F /* SceneDelegate.swift in Sources */,
 			);

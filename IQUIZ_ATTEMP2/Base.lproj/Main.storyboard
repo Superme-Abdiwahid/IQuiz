@@ -51,6 +51,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Settings"/>
                                 <connections>
                                     <action selector="Settings:" destination="yuB-Hu-5hS" eventType="touchUpInside" id="stI-NW-zFb"/>
+                                    <segue destination="TS0-FM-ZS3" kind="show" id="hn8-TQ-0ai"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -284,14 +285,78 @@
             </objects>
             <point key="canvasLocation" x="-374" y="648"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="fjK-ft-j3z">
+            <objects>
+                <viewController id="TS0-FM-ZS3" customClass="Settings" customModule="IQUIZ_ATTEMP2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gSB-JP-RSp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-sD-C4L">
+                                <rect key="frame" x="65.5" y="174" width="283.5" height="494.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVe-pt-nq9">
+                                        <rect key="frame" x="0.0" y="0.0" width="283.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter JSON URL YOU WANT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wg8-Ql-eAv">
+                                        <rect key="frame" x="0.0" y="158.5" width="283.5" height="34"/>
+                                        <color key="textColor" systemColor="systemMintColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="JSON:" destination="TS0-FM-ZS3" eventType="editingChanged" id="GBu-9G-x7b"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTf-Mc-QbW">
+                                        <rect key="frame" x="0.0" y="312.5" width="283.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="DONE"/>
+                                        <connections>
+                                            <action selector="Done:" destination="TS0-FM-ZS3" eventType="touchUpInside" id="KcM-3A-zQW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJh-UE-jtX">
+                                        <rect key="frame" x="0.0" y="463.5" width="283.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="HomePage"/>
+                                        <connections>
+                                            <segue destination="yuB-Hu-5hS" kind="show" identifier="HomePage_Settings" id="LLn-TU-iRn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c5q-lI-5MP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BeR-sD-C4L" firstAttribute="centerY" secondItem="gSB-JP-RSp" secondAttribute="centerY" id="8AC-04-O9b"/>
+                            <constraint firstItem="BeR-sD-C4L" firstAttribute="centerX" secondItem="gSB-JP-RSp" secondAttribute="centerX" id="qgK-Qj-iCU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OI7-Rj-5aC"/>
+                    <connections>
+                        <outlet property="Enter" destination="wg8-Ql-eAv" id="RrO-4g-hJ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0C-eM-bdb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2965" y="648"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="79T-X0-sdm"/>
+        <segue reference="LLn-TU-iRn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Intergal" width="900" height="1023"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,21 +13,15 @@ class Main: UIViewController{
     var QuestionsAndAnswer = [[String]]()
     var count = 1
     var found = false;
-    var url = ""
+    public var url = "http://tednewardsandbox.site44.com/questions.json"
     
     override func viewDidLoad() {
-        DispatchQueue.main.async {
-            self.TableView.reloadInputViews()
-            self.TableView.reloadData()
-        }
         super.viewDidLoad()
-        let defaults = UserDefaults.standard
-        defaults.set("http://tednewardsandbox.site44.com/questions.json", forKey: "JSON_URL")
         DispatchQueue.main.async {
             self.TableView.reloadInputViews()
             self.TableView.reloadData()
         }
-        let url = "http://tednewardsandbox.site44.com/questions.json"
+        print("THIS", url)
         fetchJson(url)
         TableView.delegate = self
         TableView.dataSource = self
@@ -35,13 +29,30 @@ class Main: UIViewController{
             self.TableView.reloadInputViews()
             self.TableView.reloadData()
         }
+        DispatchQueue.main.async {
+            self.TableView.reloadInputViews()
+            self.TableView.reloadData()
+        }
+    }
+    func displayAlert(_ title: String, _ message: String, _ LogError: String){
+                     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                     alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment:
+                         "Default action"), style: .default, handler: { _ in NSLog(LogError)
+                     }))
+                     self.present(alert, animated: true, completion: {
+                         NSLog("Alerted")})
+        
     }
     
+    @IBAction func JSON_URL(_ sender: Any) {
+    }
     func fetchJson(_ url: String){
       let task =   URLSession.shared.dataTask(with: URL(string: url)!, completionHandler:{data, response, error in
             
             guard let data = data, error == nil else{
-                print("SOMETHING WENT WRONG")
+                DispatchQueue.main.async {
+                self.displayAlert("JSON ERROR", "Error downloading JSON try agaun" , "FAILED")
+                }
                 return
             }
             
@@ -51,7 +62,9 @@ class Main: UIViewController{
                 result = try JSONDecoder().decode([Response].self, from: data)
             }
             catch{
-                print(" Failed to convert", error)
+                DispatchQueue.main.async {
+                self.displayAlert("JSON ERROR", "Error downloading JSON try agaun", "FAILED")
+                }
             }
             
             guard let json = result else{
@@ -80,8 +93,7 @@ class Main: UIViewController{
 
     
     @IBAction func Settings(_ sender: Any) {
-        UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!, options: [:])
-        UserDefaults.standard.register(defaults: ["key" : "value"])
+        
     }
     @IBAction func Setting_Button(_ sender: Any) {
     }
@@ -92,6 +104,8 @@ class Main: UIViewController{
 
     
 }
+
+
 
 
 extension Main: UITableViewDelegate{

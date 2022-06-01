@@ -49,10 +49,11 @@ class ViewController: UIViewController {
                // result = try JSONDecoder().decode([Response].self, from: data)
             }
             catch{
-                print(" Failed to convert", error)
+                self.displayAlert("JSON ERROR", "Error downloading JSON try agaun", "FAILED")
             }
             
             guard let json = result else{
+                self.displayAlert("JSON ERROR", "Error downloading JSON try agaun", "FAILED")
                 return
             }
           
@@ -76,6 +77,16 @@ class ViewController: UIViewController {
             
         })
         task.resume()
+    }
+    
+    func displayAlert(_ title: String, _ message: String, _ LogError: String){
+                     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                     alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment:
+                         "Default action"), style: .default, handler: { _ in NSLog(LogError)
+                     }))
+                     self.present(alert, animated: true, completion: {
+                         NSLog("Alerted")})
+        
     }
 
 
