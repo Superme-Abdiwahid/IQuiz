@@ -317,6 +317,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="DONE"/>
                                         <connections>
                                             <action selector="Done:" destination="TS0-FM-ZS3" eventType="touchUpInside" id="KcM-3A-zQW"/>
+                                            <segue destination="yuB-Hu-5hS" kind="show" identifier="DONE_Button" id="ZcX-8w-UJp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJh-UE-jtX">

@@ -29,7 +29,7 @@ class Settings: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier
         {
-        case Optional("HomePage_Settings"):
+        case Optional("DONE_Button"):
             
         let choice = segue.destination as! Main
             print("THe url IS", self.URL)
