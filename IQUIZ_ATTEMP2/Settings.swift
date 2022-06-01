@@ -11,6 +11,7 @@ class Settings: UIViewController{
     public var URL = ""
     override func viewDidLoad() {
         HomePage.isEnabled = false;
+        Done_Button.isEnabled = false;
         super.viewDidLoad()
     }
    
@@ -19,6 +20,7 @@ class Settings: UIViewController{
     @IBAction func JSON(_ sender: Any) {
         self.URL = Enter.text!
         HomePage.isEnabled = true;
+        Done_Button.isEnabled = true;
     }
     @IBOutlet weak var Enter: UITextField!
     
@@ -40,4 +42,7 @@ class Settings: UIViewController{
             print("Error in Segue")
         }
 }
+    @IBOutlet weak var Done_Button: UIButton!
+    @IBAction func Done_Button(_ sender: Any) {
+    }
 }

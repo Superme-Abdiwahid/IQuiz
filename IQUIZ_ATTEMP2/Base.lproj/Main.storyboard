@@ -316,7 +316,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="DONE"/>
                                         <connections>
-                                            <action selector="Done:" destination="TS0-FM-ZS3" eventType="touchUpInside" id="KcM-3A-zQW"/>
                                             <segue destination="yuB-Hu-5hS" kind="show" identifier="DONE_Button" id="ZcX-8w-UJp"/>
                                         </connections>
                                     </button>
@@ -340,6 +339,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OI7-Rj-5aC"/>
                     <connections>
+                        <outlet property="Done_Button" destination="xTf-Mc-QbW" id="G9E-sN-u5R"/>
                         <outlet property="Enter" destination="wg8-Ql-eAv" id="RrO-4g-hJ9"/>
                         <outlet property="HomePage" destination="bJh-UE-jtX" id="dnh-Q6-5qC"/>
                     </connections>
