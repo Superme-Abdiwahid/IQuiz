@@ -16,19 +16,25 @@ class Main: UIViewController{
     var url = ""
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let defaults = UserDefaults.standard
-        defaults.set("http://tednewardsandbox.site44.com/questions.json", forKey: "JSON_URL")
-            // url = 
-    //    print(defaults.url(forKey: "JSON_URL")!)
-        let url = "http://tednewardsandbox.site44.com/questions.json"
-        fetchJson(url)
         DispatchQueue.main.async {
             self.TableView.reloadInputViews()
             self.TableView.reloadData()
         }
+        super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        defaults.set("http://tednewardsandbox.site44.com/questions.json", forKey: "JSON_URL")
+        DispatchQueue.main.async {
+            self.TableView.reloadInputViews()
+            self.TableView.reloadData()
+        }
+        let url = "http://tednewardsandbox.site44.com/questions.json"
+        fetchJson(url)
         TableView.delegate = self
         TableView.dataSource = self
+        DispatchQueue.main.async {
+            self.TableView.reloadInputViews()
+            self.TableView.reloadData()
+        }
     }
     
     func fetchJson(_ url: String){
